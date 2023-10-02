@@ -49,10 +49,23 @@ order: 2;
 
 #flex-section3 .box {
 
+	align-items: center;
+	
+	display: flex;
+	justify-content: center;
+	
 }
 
 #flex-section3 .tags ul {
-
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	justify-content: start;
+	padding: 0;
+	margin: 0;
+	font-weight: 500;
+	
+	
 }
 
 /* end Flexbox Part 3 */
