@@ -1,0 +1,118 @@
+/* Flexbox Part 1 */
+
+#flex-section1 ul {
+
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	
+}
+
+/* end Flexbox Part 1 */
+
+
+/* Flexbox Part 2 */
+
+#flex-section2 ul {
+
+}
+
+#flex-section2 li {
+
+}
+
+#flex-section2 .item1 {
+
+}
+
+#flex-section2 .item2 {
+
+}
+
+#flex-section2 .item3 {
+
+}
+
+/* end Flexbox Part 2 */
+
+
+/* Flexbox Part 3 */
+
+#flex-section3 .box {
+
+}
+
+#flex-section3 .tags ul {
+
+}
+
+/* end Flexbox Part 3 */
+
+
+/* Grid Part 1 */
+
+#grid-section1 .grid {
+
+}
+
+/* end Grid Part 1 */
+
+
+/* Grid Part 2 */
+
+#grid-section2 .gridboxblue {
+
+}
+
+#grid-section2 .gridboxred {
+
+}
+
+/* end Grid Part 2 */
+
+
+/* Grid Part 3 */
+
+#grid-section3 .grid {
+
+}
+
+#grid-section3 .box1 {
+
+}
+
+#grid-section3 .box2 {
+
+}
+
+#grid-section3 .box3 {
+
+}
+
+#grid-section3 .box4 {
+
+}
+
+/* end Grid Part 3 */
+
+
+/* Transition Part */
+
+#transition-section .box a {
+	display: inline-block;
+	background-color: #ccc;
+	color: #000;
+	padding: 20px;
+	text-decoration: none;
+
+
+}
+
+#transition-section .box a:hover {
+	background-color: #cc0000;
+	color: #fff;
+
+
+}
+
+/* end Transition Part */
