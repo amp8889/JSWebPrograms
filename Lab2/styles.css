@@ -5,6 +5,7 @@
 	display: flex;
 	justify-content: space-around;
 	list-style: none;
+	margin: 0px;
 	
 }
 
@@ -15,10 +16,18 @@
 
 #flex-section2 ul {
 
+	display: flex;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	
+
+
 }
 
 #flex-section2 li {
 
+	flex: 1;
 }
 
 #flex-section2 .item1 {
@@ -26,7 +35,7 @@
 }
 
 #flex-section2 .item2 {
-
+order: 2;
 }
 
 #flex-section2 .item3 {
