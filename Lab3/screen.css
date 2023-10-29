@@ -2,8 +2,8 @@ section {
 
 background-color: aquamarine;
 margin-top: 150px;
-margin-left: 200px;
-margin-right: 200px;
+margin-left: 100px;
+margin-right: 100px;
 
 display: flex;
 flex-direction: column;
@@ -11,6 +11,42 @@ flex-direction: column;
 
 align-items: center;
 
+justify-content: center;
+
 
 
 }
+
+h1{
+
+    font-size: 50px;
+}
+
+section div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0; 
+}
+
+label {
+    text-align: right;
+    width: 300px; 
+}
+
+input {
+    width: 100%; 
+}
+
+#tipID{
+
+   
+min-width: 485px;
+
+}
+
+
+
+
+
+
