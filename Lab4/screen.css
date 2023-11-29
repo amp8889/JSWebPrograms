@@ -9,6 +9,15 @@ body {
     height: 100vh;
 }
 
+
+section{
+
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
 #dashboard {
     background-color: #fff;
     border-radius: 8px;

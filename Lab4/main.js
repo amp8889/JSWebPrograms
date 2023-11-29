@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const locationsDropdown = document.getElementById('locations');
     const currentLocationLabel = document.getElementById('currentLocation');
-    const outputLabel = document.getElementById('output');
-  
+    const outputSunrise = document.getElementById('outputSunrise');
+    const outputSunset = document.getElementById('outputSunset');
+    const outputCivilDawn = document.getElementById('outputCivilDawn');
+    const outputCivilDusk = document.getElementById('outputCivilDusk');
+    const outputDayLength = document.getElementById('outputDayLength');
+    const outputSolarNoon = document.getElementById('outputSolarNoon');
+    const outputTimeZone = document.getElementById('outputTimeZone');
+
     locationsDropdown.addEventListener('change', () => {
       const selectedLocation = locationsDropdown.value.split(',');
       const latitude = selectedLocation[0];
@@ -25,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
           fetchSunriseSunset(url);
         }, error => {
-          outputLabel.innerHTML = `Error getting location: ${error.message}`;
+          outputSunrise.innerHTML = `Error getting location: ${error.message}`;
         });
       } else {
-        outputLabel.innerHTML = "Geolocation is not supported by this browser.";
+        outputSunrise.innerHTML = "Geolocation is not supported by this browser.";
       }
     }
   
@@ -39,22 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
           const results = data.results;
           const timezone = data.timezone;
   
-          outputLabel.innerHTML = `
-            Today:
-            <br>Sunrise: ${results.sunrise}
-            <br>Sunset: ${results.sunset}
-            <br>Civil Dawn: ${results.civil_twilight_begin}
-            <br>Civil Dusk: ${results.civil_twilight_end}
-            <br>Day Length: ${results.day_length}
-            <br>Solar Noon: ${results.solar_noon}
-            <br>Time Zone: ${timezone}
-          `;
+          outputSunrise.innerHTML = `Sunrise: ${results.sunrise}`;
+          outputSunset.innerHTML = `Sunset: ${results.sunset}`;
+          outputCivilDawn.innerHTML = `Civil Dawn: ${results.civil_twilight_begin}`;
+          outputCivilDusk.innerHTML = `Civil Dusk: ${results.civil_twilight_end}`;
+          outputDayLength.innerHTML = `Day Length: ${results.day_length}`;
+          outputSolarNoon.innerHTML = `Solar Noon: ${results.solar_noon}`;
+          outputTimeZone.innerHTML = `Time Zone: ${timezone}`;
         })
         .catch(error => {
-          outputLabel.innerHTML = `Error: ${error}`;
+          outputSunrise.innerHTML = `Error: ${error}`;
         });
     }
   
     getUserLocation();
   });
-  
