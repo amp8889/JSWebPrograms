@@ -10,9 +10,9 @@
 <body>
     <main id="content">
 
-
-        <section>
+        <section id="locationSelection">
             <h1>Pick a location from the drop-down list</h1>
+            
             <select id="locations">
                 <option value="41.8623,87.6167">Chicago Soldier Field</option>
                 <option value="27.2670, 82.5463">Siesta Key Florida</option>
@@ -20,30 +20,32 @@
                 <option value="41.0814, 81.5190">Akron Ohio</option>
                 <option value="29.9584, 90.0644">New Orleans French Quarter</option>
             </select>
-        </section>
-
-        <section id="todayInfo">
             <label id="currentLocation">Current Location: </label>
-            <label id="outputSunrise">Sunrise:</label>
-            <label id="outputSunset">Sunset:</label>
-            <label id="outputCivilDawn">Dawn: </label>
-            <label id="outputCivilDusk">Dusk: </label>
-            <label id="outputDayLength">Length of Day:</label>
-            <label id="outputSolarNoon">Noon: </label>
-            <label id="outputTimeZone">Timezone: </label>
-        </section>
-            
 
-        <section id="tomInfo">
-            <label id="outputTomorrowSunrise">Tomorrow's Sunrise:</label>
-            <label id="outputTomorrowSunset">Tomorrow's Sunset:</label>
-            <label id="outputTomorrowCivilDawn">Tomorrow's Dawn: </label>
-            <label id="outputTomorrowCivilDusk">Tomorrow's Dusk: </label>
-            <label id="outputTomorrowDayLength">Tomorrow's Day Length:</label>
-            <label id="outputTomorrowSolarNoon">Tomorrow's Solar Noon: </label>
-            <label id="outputTomorrowTimeZone">Tomorrow's Timezone: </label>
         </section>
 
+        <section id="infoContainer">
+            <section class="infoSection" id="todayInfo">
+                
+                <label id="outputSunrise">Sunrise:</label>
+                <label id="outputSunset">Sunset:</label>
+                <label id="outputCivilDawn">Dawn: </label>
+                <label id="outputCivilDusk">Dusk: </label>
+                <label id="outputDayLength">Length of Day:</label>
+                <label id="outputSolarNoon">Noon: </label>
+                <label id="outputTimeZone">Timezone: </label>
+            </section>
+
+            <section class="infoSection" id="tomInfo">
+                <label id="outputTomorrowSunrise">Tomorrow's Sunrise:</label>
+                <label id="outputTomorrowSunset">Tomorrow's Sunset:</label>
+                <label id="outputTomorrowCivilDawn">Tomorrow's Dawn: </label>
+                <label id="outputTomorrowCivilDusk">Tomorrow's Dusk: </label>
+                <label id="outputTomorrowDayLength">Tomorrow's Day Length:</label>
+                <label id="outputTomorrowSolarNoon">Tomorrow's Solar Noon: </label>
+                <label id="outputTomorrowTimeZone">Tomorrow's Timezone: </label>
+            </section>
+        </section>
 
     </main>
     <footer id="footer">
