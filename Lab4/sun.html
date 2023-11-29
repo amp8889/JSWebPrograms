@@ -10,20 +10,24 @@
         
 
         
-        <div id="dashboard">
-            <h1>Sunset and Sunrise Dashboard</h1>
-            <label for="searchInput">Search Location:</label>
-            <input type="text" id="searchInput" placeholder="Enter location">
-            <button onclick="getSunsetSunrise()">Get Sunset and Sunrise</button>
-            <div id="result"></div>
-        </div>
+        <label for="locations">Select a location:</label>
+        <select id="locations">
+          <option value="41.8623,87.6167">Chicago Soldier Field</option>
+          <option value="27.2670, 82.5463">Siesta Key Florida</option>
+          <option value="45.5152,122.6784">Portland Oregon</option>
+          <option value="41.0814, 81.5190">Akron Ohio</option>
+          <option value="29.9584, 90.0644">New Orleans French Quarter</option>
+        </select>
+      
+        <br>
+      
+        <label id="output"></label>
     
         
 
 
       </main>
       <footer id="footer">
-        <p>Site content for Aidan M Pavlik</p>
       </footer>
       <script src="main.js"></script>
     </body>
