@@ -7,7 +7,6 @@ html{
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     
 }
 
@@ -19,12 +18,12 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: left;
+    /* height: 100vh; */
 }
+
 
 
 section{
@@ -35,18 +34,24 @@ section{
     
 }
 
-#dashboard {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+label{
+
+    padding: 5px;
+    margin: 20px;
+    background-color: orange;
+    border-radius: 12px;
+
+
 }
 
-#searchInput {
-    padding: 8px;
-}
 
-#result {
-    margin-top: 20px;
+select{
+
+    
+    background-color: orange;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 20px;
+
+
 }
