@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const longitude = selectedLocation[1];
   
       currentLocationLabel.innerHTML = `Current Location: ${locationsDropdown.options[locationsDropdown.selectedIndex].text}`;
-      const url = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today`; // For today's data
+      const url = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today&timezone=America/Chicago`; // Set the timezone to US Central
   
       fetchSunriseSunset(url);
     });
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const longitude = position.coords.longitude;
   
           currentLocationLabel.innerHTML = `Current Location: Your Location`;
-          const url = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today`; // For today's data
+          const url = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today&timezone=America/Chicago`; // Set the timezone to US Central
   
           fetchSunriseSunset(url);
         }, error => {
@@ -43,15 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
           const results = data.results;
-          const timezone = data.timezone;
   
           outputSunrise.innerHTML = `Sunrise: ${results.sunrise}`;
           outputSunset.innerHTML = `Sunset: ${results.sunset}`;
-          outputCivilDawn.innerHTML = `Civil Dawn: ${results.civil_twilight_begin}`;
-          outputCivilDusk.innerHTML = `Civil Dusk: ${results.civil_twilight_end}`;
+          outputCivilDawn.innerHTML = `Dawn: ${results.dawn}`;
+          outputCivilDusk.innerHTML = `Dusk: ${results.dusk}`;
           outputDayLength.innerHTML = `Day Length: ${results.day_length}`;
           outputSolarNoon.innerHTML = `Solar Noon: ${results.solar_noon}`;
-          outputTimeZone.innerHTML = `Time Zone: ${timezone}`;
+          outputTimeZone.innerHTML = `Time Zone: ${results.timezone}`;
         })
         .catch(error => {
           outputSunrise.innerHTML = `Error: ${error}`;
@@ -59,4 +58,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     getUserLocation();
-  });
+});
