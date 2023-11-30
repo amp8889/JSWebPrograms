@@ -1,12 +1,13 @@
 html {
     height: 100%;
+    font-family: 'Original Surfer', sans-serif;
+    font-size: 1.5em;
+    
 }
 
 body {
-    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1; /* This ensures that #content takes up remaining vertical space */
+    flex: 1; 
 }
 
 #locationSelection {
@@ -29,6 +30,8 @@ select {
     border-radius: 12px;
     padding: 10px;
     font-size: 20px;
+    font-family: 'Original Surfer', sans-serif;
+
 }
 
 #infoContainer {
@@ -56,4 +59,29 @@ footer {
     text-align: center;
     background-color: #333;
     color: white;
+}
+
+img{
+
+    max-width: 70px;
+  
+
+
+
+}
+
+h1{
+
+    margin: 20px;
+
+
+
+}
+
+#title{
+
+
+    display: flex;
+
+
 }

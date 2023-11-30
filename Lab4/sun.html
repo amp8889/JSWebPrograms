@@ -5,14 +5,26 @@
     <meta charset="utf-8" />
     <title>Aidan Pavlik</title>
     <link rel="stylesheet" href="screen.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <main id="content">
 
-        <section id="locationSelection">
+        <section id="title">
+            <img src="assets/sun.png" alt="image of sun">
             <h1>Pick a location from the drop-down list</h1>
+            <img src="assets/moon.png" alt="image of moon">
 
+        </section>
+
+
+
+
+        <section id="locationSelection">
+            
             <label for="locations">Select a location:</label>
             <select id="locations">
                 <option value="current">Current Location</option>
@@ -31,8 +43,8 @@
 
                 <label id="outputSunrise">Sunrise:</label>
                 <label id="outputSunset">Sunset:</label>
-                <label id="outputCivilDawn">Dawn: </label>
-                <label id="outputCivilDusk">Dusk: </label>
+                <label id="outputDawn">Dawn: </label>
+                <label id="outputDusk">Dusk: </label>
                 <label id="outputDayLength">Length of Day:</label>
                 <label id="outputSolarNoon">Noon: </label>
                 <label id="outputTimeZone">Timezone: </label>
@@ -41,8 +53,8 @@
             <section class="infoSection" id="tomInfo">
                 <label id="outputTomorrowSunrise">Tomorrow's Sunrise:</label>
                 <label id="outputTomorrowSunset">Tomorrow's Sunset:</label>
-                <label id="outputTomorrowCivilDawn">Tomorrow's Dawn: </label>
-                <label id="outputTomorrowCivilDusk">Tomorrow's Dusk: </label>
+                <label id="outputTomorrowDawn">Tomorrow's Dawn: </label>
+                <label id="outputTomorrowDusk">Tomorrow's Dusk: </label>
                 <label id="outputTomorrowDayLength">Tomorrow's Day Length:</label>
                 <label id="outputTomorrowSolarNoon">Tomorrow's Solar Noon: </label>
                 <label id="outputTomorrowTimeZone">Tomorrow's Timezone: </label>

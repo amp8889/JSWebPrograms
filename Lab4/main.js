@@ -6,17 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentLocationLabel = document.getElementById('currentLocation');
     const outputSunrise = document.getElementById('outputSunrise');
     const outputSunset = document.getElementById('outputSunset');
-    const outputCivilDawn = document.getElementById('outputCivilDawn');
-    const outputCivilDusk = document.getElementById('outputCivilDusk');
+    const outputCivilDawn = document.getElementById('outputDawn');
+    const outputCivilDusk = document.getElementById('outputDusk');
     const outputDayLength = document.getElementById('outputDayLength');
     const outputSolarNoon = document.getElementById('outputSolarNoon');
     const outputTimeZone = document.getElementById('outputTimeZone');
 
-    // Tomorrow's Information Labels
     const outputTomorrowSunrise = document.getElementById('outputTomorrowSunrise');
     const outputTomorrowSunset = document.getElementById('outputTomorrowSunset');
-    const outputTomorrowCivilDawn = document.getElementById('outputTomorrowCivilDawn');
-    const outputTomorrowCivilDusk = document.getElementById('outputTomorrowCivilDusk');
+    const outputTomorrowCivilDawn = document.getElementById('outputTomorrowDawn');
+    const outputTomorrowCivilDusk = document.getElementById('outputTomorrowDusk');
     const outputTomorrowDayLength = document.getElementById('outputTomorrowDayLength');
     const outputTomorrowSolarNoon = document.getElementById('outputTomorrowSolarNoon');
     const outputTomorrowTimeZone = document.getElementById('outputTomorrowTimeZone');
@@ -34,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const todayUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today&formatted=0`;
             const tomorrowUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow&formatted=0`;
 
-            fetchSunriseSunset(todayUrl, tomorrowUrl);
+            getSunriseSunset(todayUrl, tomorrowUrl);
         }
     });
 
@@ -48,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const todayUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today&formatted=0`;
                 const tomorrowUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow&formatted=0`;
 
-                fetchSunriseSunset(todayUrl, tomorrowUrl);
+                getSunriseSunset(todayUrl, tomorrowUrl);
             }, error => {
                 outputSunrise.innerHTML = `Error getting location: ${error.message}`;
             });
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function fetchSunriseSunset(todayUrl, tomorrowUrl) {
+    function getSunriseSunset(todayUrl, tomorrowUrl) {
         fetch(todayUrl)
             .then(response => response.json())
             .then(data => {
@@ -75,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 outputSunrise.innerHTML = `Error: ${error}`;
             });
 
-        // Fetch and display tomorrow's information
         fetch(tomorrowUrl)
             .then(response => response.json())
             .then(data => {
@@ -94,12 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // Initial load with default selected option
     locationsDropdown.dispatchEvent(new Event('change'));
 });
 
 
 
 //Tasks
-//Find SOme images to make pretty
-//
+//Find Some images to make pretty
+//Make it look slightly better
