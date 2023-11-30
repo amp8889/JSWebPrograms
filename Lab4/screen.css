@@ -1,7 +1,5 @@
 html {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
+    height: 100%;
 }
 
 body {
@@ -11,12 +9,14 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 #content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1; /* This ensures that #content takes up remaining vertical space */
 }
 
 #locationSelection {
@@ -47,4 +47,13 @@ select {
 label {
     padding: 5px;
     margin-bottom: 10px;
+}
+
+footer {
+    
+    margin: 0px;
+    margin: 0px;
+    text-align: center;
+    background-color: #333;
+    color: white;
 }

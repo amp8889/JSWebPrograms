@@ -12,21 +12,23 @@
 
         <section id="locationSelection">
             <h1>Pick a location from the drop-down list</h1>
-            
+
+            <label for="locations">Select a location:</label>
             <select id="locations">
-                <option value="41.8623,87.6167">Chicago Soldier Field</option>
+                <option value="current">Current Location</option>
+                <option value="41.8623, 87.6167">Chicago Soldier Field</option>
                 <option value="27.2670, 82.5463">Siesta Key Florida</option>
                 <option value="45.5152,122.6784">Portland Oregon</option>
                 <option value="41.0814, 81.5190">Akron Ohio</option>
                 <option value="29.9584, 90.0644">New Orleans French Quarter</option>
             </select>
-            <label id="currentLocation">Current Location: </label>
+            <label id="currentLocation">Selected Location: </label>
 
         </section>
 
         <section id="infoContainer">
             <section class="infoSection" id="todayInfo">
-                
+
                 <label id="outputSunrise">Sunrise:</label>
                 <label id="outputSunset">Sunset:</label>
                 <label id="outputCivilDawn">Dawn: </label>
@@ -48,9 +50,12 @@
         </section>
 
     </main>
+
+    </body>
     <footer id="footer">
+        <p>Powered by SunriseSunset.io and geocode.maps.co/</p>
     </footer>
     <script src="main.js"></script>
-</body>
+
 
 </html>

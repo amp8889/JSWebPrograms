@@ -1,3 +1,6 @@
+//Powered by SunriseSunset.io
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const locationsDropdown = document.getElementById('locations');
     const currentLocationLabel = document.getElementById('currentLocation');
@@ -19,15 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const outputTomorrowTimeZone = document.getElementById('outputTomorrowTimeZone');
 
     locationsDropdown.addEventListener('change', () => {
-        const selectedLocation = locationsDropdown.value.split(',');
-        const latitude = selectedLocation[0];
-        const longitude = selectedLocation[1];
+        const selectedValue = locationsDropdown.value;
+        if (selectedValue === 'current') {
+            getUserLocation();
+        } else {
+            const selectedLocation = selectedValue.split(',');
+            const latitude = selectedLocation[0];
+            const longitude = selectedLocation[1];
 
-        currentLocationLabel.innerHTML = `Current Location: ${locationsDropdown.options[locationsDropdown.selectedIndex].text}`;
-        const todayUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today&timezone=America/Chicago`;
-        const tomorrowUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow&timezone=America/Chicago`;
+            currentLocationLabel.innerHTML = `Selected Location: ${locationsDropdown.options[locationsDropdown.selectedIndex].text}`;
+            const todayUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today&formatted=0`;
+            const tomorrowUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow&formatted=0`;
 
-        fetchSunriseSunset(todayUrl, tomorrowUrl);
+            fetchSunriseSunset(todayUrl, tomorrowUrl);
+        }
     });
 
     function getUserLocation() {
@@ -36,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
 
-                currentLocationLabel.innerHTML = `Current Location: Your Location`;
-                const todayUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today&timezone=America/Chicago`;
-                const tomorrowUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow&timezone=America/Chicago`;
+                currentLocationLabel.innerHTML = `Selected Location: Your Location`;
+                const todayUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today&formatted=0`;
+                const tomorrowUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow&formatted=0`;
 
                 fetchSunriseSunset(todayUrl, tomorrowUrl);
             }, error => {
@@ -86,5 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    getUserLocation();
+    // Initial load with default selected option
+    locationsDropdown.dispatchEvent(new Event('change'));
 });
+
+
+
+//Tasks
+//Find SOme images to make pretty
+//
